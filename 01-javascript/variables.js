@@ -96,6 +96,63 @@ if (undefined) {
 } else {
     console.log("es falsy")
 }
-console.log("siempre comprobar la existencia de los falsy \"\" 0 null undefined");
+console.log("siempre comprobar la existencia de los falsy \"\" 0 null undefined\n");
+
+
+console.log("---------Orden importancia de variables");
+console.log(`const = usarlo siempre que se pueda
+let = usarlo si no se puede algo ser const
+var = NUNCA USARLO`);
+
+
+console.log("---------Objeto js y arreglos");
+
+console.log(`no se necesita constructor
+no son lo mismo que JSON ---> tipo Object != JSON
+son de tipo object
+NO HAY DIFERENCIA ENTRE OBJETOS COMO NULL, LOS OBJETOS LLENOS Y ARREGLOS`);
+
+//objeto vacio tipo object
+const vacio = {
+
+};
+
+//objeto lleno tipo object
+const lleno = {
+    nombre: "jaja",
+    //se puede decifir las propiedades con strings
+    "apellido": 'nose',
+    edad: 31,
+    hijos: null,
+    zapatos: undefined,
+    //objeto dentro de otro objeto
+    ropa: {
+        color: 'plomo',
+        talla: '40',
+    },
+    mascota: ['peluchin', 'blanco', 'estrella', 'bebe', 'luna', 'firulais']
+};
+
+
+//imprimo todo el objeto
+console.log(lleno);
+//imprimo una propiedad del objeto
+console.log(lleno.mascota);
+
+
+//arreglo tipo object
+const arregloNumero = [];
+console.log(arregloNumero);
+
+
+
+
+
+
+
+
+
+
+
 
 
