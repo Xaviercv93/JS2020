@@ -163,6 +163,26 @@ console.log("\n elimino realmente nueva propiedad saldo ");
 console.log(delete lleno.sueldo); //resultado undefined
 console.log(lleno);//resultado objeto sin propiedad saldo 
 
+console.log("\n----Clase object - obtener las keys");
+console.log(Object.keys(lleno));
+lleno.direccion="quito";
+console.log(Object.keys(lleno));
+lleno.direccion=undefined;
+console.log(Object.keys(lleno));
+delete lleno.direccion;
+console.log(Object.keys(lleno));
+
+console.log("\n----Clase object - obtener los values");
+console.log(Object.values(lleno));
+lleno.direccion="quito";
+console.log(Object.values(lleno));
+lleno.direccion=undefined;
+console.log(Object.values(lleno));
+delete lleno.direccion;
+console.log(Object.values(lleno));
+
+
+
 //arreglo tipo object
 const arregloNumero = [];
 console.log(arregloNumero);
