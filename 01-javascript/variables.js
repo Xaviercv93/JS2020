@@ -113,6 +113,7 @@ son de tipo object
 NO HAY DIFERENCIA ENTRE OBJETOS COMO NULL, LOS OBJETOS LLENOS Y ARREGLOS`);
 
 //objeto vacio tipo object
+//es un objeto valido
 const vacio = {
 
 };
@@ -125,12 +126,13 @@ const lleno = {
     edad: 31,
     hijos: null,
     zapatos: undefined,
+    casado: false,
     //objeto dentro de otro objeto
     ropa: {
         color: 'plomo',
         talla: '40',
     },
-    mascota: ['peluchin', 'blanco', 'estrella', 'bebe', 'luna', 'firulais']
+    mascota: ['peluchin', 'blanco', 'estrella', 'bebe', 'luna', 'firulais'],
 };
 
 
@@ -138,7 +140,28 @@ const lleno = {
 console.log(lleno);
 //imprimo una propiedad del objeto
 console.log(lleno.mascota);
+//imprimo una propiedad del objeto
+console.log(lleno["mascota"]);
 
+
+console.log(`\nAunque el objeto sea const
+se puede reasigna o cambiar los valores de las propiedades del objeto lleno
+si se puede cambiar cuantas o cuales propiedades tiene`);
+
+lleno.mascota = ["bethoben", "pelos"];
+console.log(lleno.mascota);
+
+console.log("\nvariables no definida saldo");
+console.log(lleno.sueldo); //resultado undefined
+console.log("\n añado nueva propiedad saldo ");
+console.log(lleno.sueldo = 1.5); //resultado 1.5
+console.log(lleno);//resultado objeto con propiedad saldo al final
+console.log("\n borro el valor de nueva propiedad saldo ");
+console.log(lleno.sueldo = undefined); //resultado undefined
+console.log(lleno);//resultado objeto con propiedad saldo al final con valor undefined
+console.log("\n elimino realmente nueva propiedad saldo ");
+console.log(delete lleno.sueldo); //resultado undefined
+console.log(lleno);//resultado objeto sin propiedad saldo 
 
 //arreglo tipo object
 const arregloNumero = [];
