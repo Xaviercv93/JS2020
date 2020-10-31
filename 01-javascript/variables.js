@@ -165,24 +165,63 @@ console.log(lleno);//resultado objeto sin propiedad saldo
 
 console.log("\n----Clase object - obtener las keys");
 console.log(Object.keys(lleno));
-lleno.direccion="quito";
+lleno.direccion = "quito";
 console.log(Object.keys(lleno));
-lleno.direccion=undefined;
+lleno.direccion = undefined;
 console.log(Object.keys(lleno));
 delete lleno.direccion;
 console.log(Object.keys(lleno));
 
 console.log("\n----Clase object - obtener los values");
 console.log(Object.values(lleno));
-lleno.direccion="quito";
+lleno.direccion = "quito";
 console.log(Object.values(lleno));
-lleno.direccion=undefined;
+lleno.direccion = undefined;
 console.log(Object.values(lleno));
 delete lleno.direccion;
 console.log(Object.values(lleno));
 
+console.log(`\n--------variables por valor
+tengo variables variables que toman el valor de otra
+no comparte la misma direccion de memoria
+no apunta al mismo espacio de memoria
+si clona la variable
+si cambio el valor de la variable copia afecta a la variables que la copiaron
+si cambio el valor de una variable que copio no afecta a la variable copiada
+pueden ser:
+\tnumber
+\tstring
+\tboolean
+\tundefined`);
 
+let edadd = 5;
+let edadd2 = edadd;
+console.log(edadd, `\t`, edadd2);
+edadd2 = edadd + 1;
+console.log(edadd, `\t`, edadd2);//solo cambio el valor de la variable nueva no de la original
 
+console.log(`\n--------variables por referencia
+tengo variables variables que toman el valor de otra
+SI comparte la misma direccion de memoria
+si apuntan al mismo espacio de memoria
+no clono la variable
+si cambio el valor de la variable copia afecta a la variables que la copiaron
+si cambio el valor de una variable que copio si afecta a la variable copiada
+pueden ser:
+\tnumber
+\tstring
+\tboolean
+\tundefined`);
+
+let person = {
+    nombre:`pe`,
+};
+let person2 = person;
+console.log(person, `\t`, person2);
+person2.nombre = `pelos`;
+console.log(person, `\t`, person2);//cambio el valor de la propiedad de ambas variables
+delete person.nombre;
+console.log(person, `\t`, person2);//solo cambio el valor de la variable copiada si afecta a las que la referenciadas
 //arreglo tipo object
 const arregloNumero = [];
 console.log(arregloNumero);
