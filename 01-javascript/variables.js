@@ -22,6 +22,7 @@ const configuracionArchivos = "PDF";
 //configuracionArchivos = "XML";
 
 //tipos de variables
+//numeros enteres y numeros decimales son number
 const numero = 1;
 const sueldo = 1.2;
 const texto = "javi";
@@ -31,4 +32,17 @@ const zapatos = undefined; //undefined
 
 console.log(typeof numero, typeof sueldo, typeof texto, typeof booleanoo,
     typeof hijo, typeof zapatos);
+
+//La clase Number me devuelve un number y comprueba si algo pasado como argumento es un numero
+console.log(typeof Number("javi"),Number("javi"));
+
+
+
+
+
+
+
+
+
+
 
