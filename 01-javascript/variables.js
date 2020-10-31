@@ -37,6 +37,7 @@ console.log(typeof numero, typeof sueldo, typeof texto, typeof booleanoo,
 console.log(typeof Number("javi"), Number("javi"));
 
 
+console.log("TRUTY Y FALSY");
 
 //truty y falsy
 if (true == true) {
@@ -82,6 +83,19 @@ if (1) {
     console.log("es falsy")
 }
 
-console.log("siempre comprobar la existencia de los falsy \"\" 0");
+//falsy = el null
+if (null) {
+    console.log("es truty")
+} else {
+    console.log("es falsy")
+}
+
+//falsy = el undefined
+if (undefined) {
+    console.log("es truty")
+} else {
+    console.log("es falsy")
+}
+console.log("siempre comprobar la existencia de los falsy \"\" 0 null undefined");
 
 
